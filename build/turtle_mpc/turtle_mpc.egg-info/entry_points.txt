@@ -1,3 +1,0 @@
-[console_scripts]
-turtle_waypoint_controller = turtle_mpc.turtle_waypoint_controller:main
-
