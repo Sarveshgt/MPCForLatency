@@ -24,7 +24,11 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'turtle_controller = my_turtle_controller.turtle_controller:main'
+            'turtle_controller = my_turtle_controller.turtle_controller:main',
+
+            # Added this 
+            'network_delay_node = my_turtle_controller.network_delay_node:main',
+       
         ],
     },
 )
