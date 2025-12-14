@@ -31,6 +31,9 @@ setup(
             # 2 new nodes
             'jitter_node = my_turtle_controller.jitter_node:main',
             'tunnel_node = my_turtle_controller.tunnel_node:main',
+
+            #Added thiss
+            'mpc_supervisor_node = my_turtle_controller.mpc_supervisor_node:main',
         ],
     },
 )
