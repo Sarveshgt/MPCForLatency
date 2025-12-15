@@ -26,10 +26,10 @@ class NetworkDelayNode(Node):
             self.listener_callback,
             10)
 
-        # 2. Publish to the "Real" robot (Turtlesim)
+        # 2. Publish to turtle_controller (not directly to turtlesim)
         self.publisher = self.create_publisher(
             Twist,
-            '/turtle1/cmd_vel',
+            '/turtle_controller_input',
             10)
 
         # 3. Publish delay status (True when delay is applied)
