@@ -10,7 +10,7 @@ def generate_launch_description():
     rviz_config = os.path.join(pkg_share, 'rviz', 'mpc_visualization.rviz')
 
     return LaunchDescription([
-        # Launch network delay node
+        # 1. Network Delay Node
         Node(
             package='my_turtle_controller',
             executable='network_delay_node',
@@ -18,7 +18,7 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # Launch turtle controller (with internal state tracking - no turtlesim needed!)
+        # 2. Real Turtle Controller (MPC)
         Node(
             package='my_turtle_controller',
             executable='turtle_controller',
@@ -26,7 +26,15 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # Launch robot visualizer (blue arrow marker)
+        # 3. NEW: Ghost Controller (The delayed/choppy robot)
+        Node(
+            package='my_turtle_controller',
+            executable='ghost_controller',
+            name='ghost_controller',
+            output='screen'
+        ),
+
+        # 4. Robot Visualizer (Now handles BOTH cars)
         Node(
             package='my_turtle_controller',
             executable='robot_visualizer',
@@ -34,7 +42,7 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # Launch RViz visualizer (obstacles and goal markers)
+        # 5. RViz Visualizer (Obstacles/Goal)
         Node(
             package='my_turtle_controller',
             executable='rviz_visualizer',
@@ -42,7 +50,15 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # Launch RViz2 with config
+        # 6. NEW: Performance Plotter (The Graph)
+        Node(
+            package='my_turtle_controller',
+            executable='performance_plotter',
+            name='performance_plotter',
+            output='screen'
+        ),
+
+        # 7. RViz2
         Node(
             package='rviz2',
             executable='rviz2',
@@ -51,12 +67,12 @@ def generate_launch_description():
             output='screen'
         ),
 
-        # Launch keyboard teleop (no turtlesim dependency!)
+        # 8. Keyboard Teleop
         Node(
             package='my_turtle_controller',
             executable='keyboard_teleop',
             name='teleop',
             output='screen',
-            prefix='gnome-terminal --'  # Run in separate terminal
+            prefix='gnome-terminal --'
         ),
     ])

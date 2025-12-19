@@ -36,6 +36,8 @@ setup(
             'robot_visualizer = my_turtle_controller.robot_visualizer:main',
             'keyboard_teleop = my_turtle_controller.keyboard_teleop:main',
             'demo_sequence = my_turtle_controller.demo_sequence:main',
+            'ghost_controller = my_turtle_controller.ghost_controller:main',     # <--- NEW
+            'performance_plotter = my_turtle_controller.performance_plotter:main', # <--- NEW
         ],
     },
 )
