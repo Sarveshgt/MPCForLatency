@@ -50,9 +50,19 @@ class RobotVisualizer(Node):
         base_pos = np.array([msg.pose.position.x, msg.pose.position.y, msg.pose.position.z])
 
         # Chassis
+        # ... inside publish_composite ...
+
+        # Chassis
         chassis = self.create_marker(msg, id_offset + 0, Marker.CUBE, r, g, b, a)
         chassis.scale.x, chassis.scale.y, chassis.scale.z = (2.0, 1.0, 0.5)
-        chassis.pose.position.z += 0.25
+    
+        # --- FIX START ---
+        # Explicitly set X and Y to the robot's current position
+        chassis.pose.position.x = msg.pose.position.x
+        chassis.pose.position.y = msg.pose.position.y
+        chassis.pose.position.z = msg.pose.position.z + 0.25
+        # --- FIX END ---
+    
         marker_array.markers.append(chassis)
 
         # Cabin
