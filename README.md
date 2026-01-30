@@ -162,10 +162,10 @@ where α controls the strength of repulsion and d_obstacle is the distance to th
 <div align="center">
 
 ### Control Interface
-<img src="assets/Screenshot 2025-12-19 at 5.56.09 PM.png" width="700px" alt="Control Interface"/>
+<img src="assets/image_1.png" width="700px" alt="Control Interface"/>
 
 ### Performance Metrics
-<img src="assets/Screenshot 2025-12-19 at 5.56.36 PM.png" width="700px" alt="Performance Metrics"/>
+<img src="assets/image_2.png" width="700px" alt="Performance Metrics"/>
 
 </div>
 
@@ -304,18 +304,6 @@ For detailed technical information, algorithm derivations, and experimental resu
 - **Optimization**: SciPy (Sequential Quadratic Programming)
 - **Visualization**: RViz, Matplotlib
 - **Simulation**: TurtleSim
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
