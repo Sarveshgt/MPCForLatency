@@ -239,6 +239,10 @@ The framework was evaluated in a **ROS 2 simulation (RViz)** comparing a standar
 
 ## 🎥 Demo
 
+[![Demo Video](https://img.youtube.com/vi/UDsfPFw9gRc/0.jpg)](https://www.youtube.com/watch?v=UDsfPFw9gRc)
+
+**[▶️ Watch the full demo video on YouTube](https://www.youtube.com/watch?v=UDsfPFw9gRc)**
+
 The system demonstrates robust performance across various network conditions:
 
 1. **Normal Operation**: Smooth tracking with minimal latency
